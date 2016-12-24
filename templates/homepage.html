@@ -5,12 +5,25 @@
     <meta charset="UTF-8">
     <title>ShortURL</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
+    <link rel="stylesheet" href="{% static 'Common/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'shorturlapp/css/custom.css' %}">
 </head>
 <body>
-<form action="" enctype="multipart/form-data">
-    {% csrf_token %}
-    <button type="submit">Submit !!</button>
-</form>
+
+    {# Navigational Bar #}
+
+
+    {# form #}
+    <form method="POST" action="" enctype="multipart/form-data">
+        {% csrf_token %}
+        <button type="submit">Submit !!</button>
+    </form>
+
+    {# footer #}
+
+
+    {# Scripts #}
+    <script  src="{% static 'Common/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'shorturlapp/js/custom.js' %}"></script>
 </body>
 </html>

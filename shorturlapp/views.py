@@ -2,8 +2,7 @@ from django.shortcuts import render
 from django.views import View
 import requests
 
-URL = 'https://www.googleapis.com/urlshortener/v1/url?key='
-API_KEY = 'AIzaSyAlC-t7RRoIqeVWA0GDoDjRoQ8gFMja-eA'
+URL = 'https://www.googleapis.com/urlshortener/v1/url?key=AIzaSyAlC-t7RRoIqeVWA0GDoDjRoQ8gFMja-eA'
 
 
 class Index(View):
