@@ -1,0 +1,78 @@
+body {
+    width: 100%;
+    height: 100%;
+}
+
+a, a:hover {
+    text-decoration: none;
+}
+
+#top-bar > h,
+#top-bar > a {
+    float: left;
+}
+
+#shorturl,
+#shorturl:focus {
+    border-radius: 25px;
+    outline: none;
+    padding: 20px;
+    resize: none;
+    margin-left: 340px;
+    margin-top: 15px;
+}
+
+#reset-btn{
+    margin-left:340px;
+    font-size: 14px!important;
+}
+
+#short-btn{
+    margin-left: 570px;
+}
+
+#reset-btn,
+#short-btn {
+    border-radius: 15px;
+    line-height: 1.42;
+    width: 54px;
+    height: 54px;
+    text-align: center;
+    padding:10px;
+    font-size: 12px;
+    border:none;
+}
+
+#foot-block {
+    height: 100px;
+    width: 100%;
+    background-color: #ffffff;
+    bottom: 0;
+    margin-bottom: 0;
+}
+
+.contact-list {
+    margin-left: 375px;
+}
+
+.contact-list > li {
+    list-style: none;
+    float: left;
+    padding: 10px 40px 0 40px;
+}
+
+#github-link:hover {
+    color: deeppink;
+}
+
+#facebook-link:hover {
+    color: #3b5998;
+}
+
+#linkedin-link:hover {
+    color: dodgerblue;
+}
+
+#quora-link:hover {
+    color: darkred;
+}
