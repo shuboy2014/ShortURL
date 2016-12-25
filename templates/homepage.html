@@ -3,27 +3,45 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>ShortURL</title>
+    <title>ShortURL | Make your urls shorter</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="{% static 'Common/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'common/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'shorturlapp/css/custom.css' %}">
+    <link rel="stylesheet" href="{% static 'common/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'shorturlapp/css/styles.css' %}">
 </head>
 <body>
-
-    {# Navigational Bar #}
-
+    <div id="top-bar">
+        <h2 align="center">Make your Urls Shorter</h2>
+    </div>
 
     {# form #}
     <form method="POST" action="" enctype="multipart/form-data">
-        {% csrf_token %}
-        <button type="submit">Submit !!</button>
+        <div>
+            <textarea cols="80" rows="10" id="shorturl" placeholder="Enter Short Urls here....."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" id="reset-btn">Reset</button>
+        <button type="submit" class="btn btn-primary" id="short-btn"><i class="fa fa-paper-plane fa-2x"></i></button>
     </form>
-
     {# footer #}
+    <footer id="foot-block">
+        <ul class="contact-list">
+            <li><a class="onhover" href="" id="github-link"><i class="fa fa-github fa-4x" id="github"></i></a></li>
+            <li><a class="onhover" href="" id="linkedin-link"><i class="fa fa-linkedin fa-4x" id="linkedin"></i></a></li>
+            <li><a class="onhover" href="" id="facebook-link"><i class="fa fa-facebook fa-4x" id="facebook"></i></a></li>
+            <li><a class="onhover" href="" id="quora-link"><i class="fa fa-quora fa-4x" id="quora"></i></a></li>
+        </ul>
+    </footer>
 
+    <div class="container">
+        <hr>
+        <p align="center" style="padding: 10px;">Made with <i class="fa fa-heart" style="color: red"></i> in India 2016
+            using <a href="https://developers.google.com/url-shortener/">Google URL Shorter API</a></p>
+    </div>
 
     {# Scripts #}
-    <script  src="{% static 'Common/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'common/js/bootstrap.min.js' %}"></script>
     <script src="{% static 'shorturlapp/js/custom.js' %}"></script>
+    {% csrf_token %}
 </body>
 </html>
