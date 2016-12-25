@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import JsonResponse
 from django.views import View
 import requests
 import json
@@ -11,12 +12,18 @@ class Index(View):
         return render(request, "homepage.html", {})
 
     def post(self, request):
-        data = {
-            "longUrl": request.POST["longurl"]
-        }
-
-        x = requests.post(url=URL, data=json.dumps(data), headers={
-            'Content-Type': 'application/json'
-        })
-        print x.json()
-        return render(request, "homepage.html", {})
+        urls = request.POST.get("longUrls", "")
+        urls = urls.split("\n")
+        if urls:
+            shorturls = {}
+            for index, url in enumerate(urls):
+                data = {
+                    "longUrl": url
+                }
+                x = requests.post(url=URL, data=json.dumps(data), headers={
+                    'Content-Type': 'application/json'
+                })
+                shorturls[str(index)] = x.json()["id"]
+            return JsonResponse({'status': 'okay', "shorturls": json.dumps(shorturls)})
+        else:
+            return JsonResponse({'status': 'failed'})
