@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="{% static 'common/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'shorturlapp/css/custom.css' %}">
     <link rel="stylesheet" href="{% static 'common/css/font-awesome.min.css' %}">
-    <link rel="stylesheet" href="{% static 'shorturlapp/css/styles.css' %}">
 </head>
 <body>
     <div id="top-bar">
@@ -16,13 +15,13 @@
     </div>
 
     {# form #}
-    <form method="POST" action="" enctype="multipart/form-data">
+    <div>
         <div>
-            <textarea cols="80" rows="10" id="shorturl" placeholder="Enter Short Urls here....."></textarea>
+            <textarea cols="80" rows="10" id="tobeshort" placeholder="Enter Short Urls here....."></textarea>
         </div>
-        <button type="submit" class="btn btn-primary" id="reset-btn">Reset</button>
+        <button type="button" class="btn btn-primary" id="reset-btn">Reset</button>
         <button type="submit" class="btn btn-primary" id="short-btn"><i class="fa fa-paper-plane fa-2x"></i></button>
-    </form>
+    </div>
     {# footer #}
     <footer id="foot-block">
         <ul class="contact-list">
