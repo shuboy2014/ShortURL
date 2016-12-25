@@ -12,8 +12,8 @@ a, a:hover {
     float: left;
 }
 
-#shorturl,
-#shorturl:focus {
+#tobeshort,
+#tobeshort:focus {
     border-radius: 25px;
     outline: none;
     padding: 20px;
@@ -22,13 +22,13 @@ a, a:hover {
     margin-top: 15px;
 }
 
-#reset-btn{
-    margin-left:340px;
-    font-size: 14px!important;
+#reset-btn {
+    margin-left: 340px;
+    font-size: 14px !important;
 }
 
-#short-btn{
-    margin-left: 570px;
+#short-btn {
+    margin-left: 580px;
 }
 
 #reset-btn,
@@ -38,9 +38,10 @@ a, a:hover {
     width: 54px;
     height: 54px;
     text-align: center;
-    padding:10px;
+    padding: 10px;
     font-size: 12px;
-    border:none;
+    border: none;
+    outline: none;
 }
 
 #foot-block {
@@ -59,6 +60,13 @@ a, a:hover {
     list-style: none;
     float: left;
     padding: 10px 40px 0 40px;
+}
+
+#github-link,
+#facebook-link,
+#linkedin-link,
+#quora-link {
+    color: black;
 }
 
 #github-link:hover {
