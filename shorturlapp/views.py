@@ -13,8 +13,8 @@ class Index(View):
 
     def post(self, request):
         urls = request.POST.get("longUrls", "")
-        urls = urls.split("\n")
         if urls:
+            urls = urls.split("\n")
             shorturls = {}
             for index, url in enumerate(urls):
                 data = {
