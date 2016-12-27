@@ -84,3 +84,56 @@ a, a:hover {
 #quora-link:hover {
     color: darkred;
 }
+
+#links-list > hr,
+#links-list > div {
+    float: left;
+}
+
+#serial-number {
+    margin-left: 180px;
+    width: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+#longUrls {
+    width: 450px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#longUrls > p {
+    padding-left: 15px;
+}
+
+#shortUrls > p {
+    padding-left: 15px;
+}
+
+#shortUrls {
+    width: 350px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+hr {
+    display: block;
+    position: relative;
+    padding: 0;
+    margin: 8px auto;
+    height: 0;
+    width: 100%;
+    max-height: 0;
+    font-size: 1px;
+    line-height: 0;
+    clear: both;
+    border: none;
+    border-top: 1px solid #aaaaaa;
+    border-bottom: 1px solid #ffffff;
+}
+
+#result {
+    display: none;
+}
