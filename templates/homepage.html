@@ -8,39 +8,59 @@
     <link rel="stylesheet" href="{% static 'common/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'shorturlapp/css/custom.css' %}">
     <link rel="stylesheet" href="{% static 'common/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'common/css/twemoji-awesome.css' %}">
 </head>
 <body>
-    <div id="top-bar">
-        <h2 align="center">Make your Urls Shorter</h2>
-    </div>
+<div id="top-bar">
+    <h2 align="center">Make your Urls Shorter</h2>
+</div>
 
-    {# form #}
+{# form #}
+<div>
     <div>
-        <div>
-            <textarea cols="80" rows="10" id="tobeshort" placeholder="Enter Short Urls here....."></textarea>
+        <textarea cols="80" rows="10" id="tobeshort" placeholder="Enter Short Urls here....."></textarea>
+    </div>
+    <button type="button" class="btn btn-primary" id="reset-btn">Reset</button>
+    <button type="submit" class="btn btn-primary" id="short-btn"><i class="fa fa-paper-plane fa-2x"></i></button>
+</div>
+
+<div id="result">
+    <h2 align="center" style="font-weight: 700">Awesome Your Shorten <i class="fa fa-link" aria-hidden="true"></i> links
+    </h2>
+
+    <div class="container" id="links-list">
+        <div id="serial-number">
+            <h3 style="font-weight: 700;">#</h3>
         </div>
-        <button type="button" class="btn btn-primary" id="reset-btn">Reset</button>
-        <button type="submit" class="btn btn-primary" id="short-btn"><i class="fa fa-paper-plane fa-2x"></i></button>
+        <div id="longUrls">
+            <h3 style="text-align: center;font-weight: 700;">longUrls</h3>
+        </div>
+        <div id="shortUrls">
+            <h3 style="text-align: center;font-weight: 700;">shorturls</h3>
+        </div>
     </div>
-    {# footer #}
-    <footer id="foot-block">
-        <ul class="contact-list">
-            <li><a class="onhover" href="" id="github-link"><i class="fa fa-github fa-4x" id="github"></i></a></li>
-            <li><a class="onhover" href="" id="linkedin-link"><i class="fa fa-linkedin fa-4x" id="linkedin"></i></a></li>
-            <li><a class="onhover" href="" id="facebook-link"><i class="fa fa-facebook fa-4x" id="facebook"></i></a></li>
-            <li><a class="onhover" href="" id="quora-link"><i class="fa fa-quora fa-4x" id="quora"></i></a></li>
-        </ul>
-    </footer>
+</div>
+<br>
+<br>
+{# footer #}
+<footer id="foot-block">
+    <ul class="contact-list">
+        <li><a class="onhover" href="" id="github-link"><i class="fa fa-github fa-4x" id="github"></i></a></li>
+        <li><a class="onhover" href="" id="linkedin-link"><i class="fa fa-linkedin fa-4x" id="linkedin"></i></a></li>
+        <li><a class="onhover" href="" id="facebook-link"><i class="fa fa-facebook fa-4x" id="facebook"></i></a></li>
+        <li><a class="onhover" href="" id="quora-link"><i class="fa fa-quora fa-4x" id="quora"></i></a></li>
+    </ul>
+</footer>
 
-    <div class="container">
-        <hr>
-        <p align="center" style="padding: 10px;">Made with <i class="fa fa-heart" style="color: red"></i> in India 2016
-            using <a href="https://developers.google.com/url-shortener/">Google URL Shorter API</a></p>
-    </div>
+<div class="container">
+    <hr>
+    <p align="center" style="padding: 10px;">Made with <i class="fa fa-heart" style="color: red"></i> in India 2016
+        using <a href="https://developers.google.com/url-shortener/">Google URL Shorter API</a></p>
+</div>
 
-    {# Scripts #}
-    <script src="{% static 'common/js/bootstrap.min.js' %}"></script>
-    <script src="{% static 'shorturlapp/js/custom.js' %}"></script>
-    {% csrf_token %}
+{# Scripts #}
+<script src="{% static 'common/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'shorturlapp/js/custom.js' %}"></script>
+{% csrf_token %}
 </body>
 </html>
