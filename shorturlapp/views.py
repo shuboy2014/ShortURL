@@ -17,13 +17,16 @@ class Index(View):
             urls = urls.split("\n")
             shorturls = {}
             for index, url in enumerate(urls):
-                data = {
-                    "longUrl": url
-                }
-                x = requests.post(url=URL, data=json.dumps(data), headers={
-                    'Content-Type': 'application/json'
-                })
-                shorturls[str(index)] = x.json()["id"]
+                if url:
+                    data = {
+                        "longUrl": url
+                    }
+                    x = requests.post(url=URL, data=json.dumps(data), headers={
+                        'Content-Type': 'application/json'
+                    })
+                    shorturls[str(index)] = x.json()["id"]
+                else:
+                    shorturls[str(index)] = ""
             return JsonResponse({'status': 'okay', "shorturls": json.dumps(shorturls)})
         else:
             return JsonResponse({'status': 'failed'})
